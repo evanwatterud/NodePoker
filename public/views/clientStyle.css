@@ -1,0 +1,51 @@
+#card-wrapper {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+}
+
+#visible-cards-wrapper {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+#done-button {
+  margin-top: 20px;
+}
+
+.card {
+  float: left;
+  width: 120px;
+  text-align: center;
+}
+
+.visible-card {
+  display: inline-block;
+  width: 56px;
+}
+
+.card-image {
+  height: 150px;
+  width: 100px;
+  margin: 10px;
+}
+
+.visible-card-image {
+  height: 75px;
+  width: 50px;
+  margin: 3px;
+}
+
+span {
+  float: left;
+  clear: left;
+}
+
+#messages {
+  margin: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

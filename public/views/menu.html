@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <link rel="stylesheet" href="views/menuStyle.css">
+  </head>
+  <body>
+
+    <div id="option-buttons">
+      <div id="dropdown-wrapper">
+        <label for="ai-players-dropdown">Select number of AI players: </label>
+        <select name="ai-players-dropdown" id="ai-players-dropdown" >
+          <option selected value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+      <div id="dropdown-wrapper">
+        <label for="ai-strategy-dropdown1">Select strategy for AI 1 if applicable: </label>
+        <select name="ai-strategy-dropdown1" id="ai-strategy-dropdown1" >
+          <option selected value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+
+      <div id="dropdown-wrapper">
+        <label for="ai-strategy-dropdown2">Select strategy for AI 2 if applicable: </label>
+        <select name="ai-strategy-dropdown2" id="ai-strategy-dropdown2" >
+          <option selected value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+
+      <div id="dropdown-wrapper">
+        <label for="ai-strategy-dropdown3">Select strategy for AI 3 if applicable: </label>
+        <select name="ai-strategy-dropdown3" id="ai-strategy-dropdown3" >
+          <option selected value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+
+      <button id="start-button" type="button">Start Game</button>
+    </div>
+
+  </body>
+</html>

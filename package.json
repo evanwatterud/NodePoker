@@ -1,0 +1,20 @@
+{
+  "name": "nodepoker",
+  "version": "1.0.0",
+  "description": "a node.js poker game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "mocha": "^4.0.1",
+    "poker-evaluator": "^0.3.1",
+    "selenium-webdriver": "^3.6.0",
+    "socket.io": "^2.0.4"
+  }
+}
