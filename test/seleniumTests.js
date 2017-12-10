@@ -1,5 +1,5 @@
 var assert = require('assert');
-var selenium = require('selenium-webdriver');
+var webdriver = require('selenium-webdriver');
 var chrome = require('selenium-webdriver/chrome');
 var path = require('chromedriver').path;
 
@@ -9,3 +9,8 @@ chrome.setDefaultService(service);
 var driver = new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
     .build();
+
+driver.get('http://www.google.com');
+driver.findElement(webdriver.By.name('q')).sendKeys('simple programmer');
+driver.findElement(webdriver.By.name('btnG')).click();
+driver.quit();
