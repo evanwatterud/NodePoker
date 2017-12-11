@@ -6,6 +6,7 @@ var io = require('socket.io')(server);
 var Game = require('./public/model/game');
 
 var game = new Game();
+var connections = 0;
 
 // Server listening on port 8080
 server.listen(8080);
@@ -34,15 +35,18 @@ var broadcast = function(msg) {
 
 // Handle connections to the server
 io.on('connection', function (socket) {
-  broadcast("A new player has entered the room.");
+  connections += 1;
 
-  game.addPlayer({
-    name: 'Player ' + game.players.length,
-    sid: socket.id,
-    isAI: false,
-    playing: false
-  });
+  if (connections != 1) {
+    broadcast("A new player has entered the room.");
 
+    game.addPlayer({
+      name: 'Player ' + game.players.length,
+      sid: socket.id,
+      isAI: false,
+      playing: false
+    });
+  }
   // Start the game when the correct number of players are in the room
   if (game.players.length == game.maxPlayers) {
     game.start();
@@ -136,3 +140,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get("*", function(req, res) {
 	res.sendStatus(404);
 });
+
+module.exports = server;

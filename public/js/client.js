@@ -42,10 +42,10 @@ $(document).ready(function(){
 
   socket.on('winner', function(data) {
     $('#winner-message').text(data.gameWinner + ' is the winner of the round.');
-    $('#rank1').text('1. ' + data.ranks[0].name + ' hand: ' + data.ranks[0].hand + ' ' + data.ranks[0].value);
-    $('#rank2').text('2. ' + data.ranks[1].name + ' hand: ' + data.ranks[1].hand + ' ' + data.ranks[1].value);
-    $('#rank3').text('3. ' + data.ranks[2].name + ' hand: ' + data.ranks[2].hand + ' ' + data.ranks[2].value);
-    $('#rank4').text('4. ' + data.ranks[3].name + ' hand: ' + data.ranks[3].hand + ' ' + data.ranks[3].value);
+    $('#rank1').text('1. ' + data.ranks[0].name + ' hand: ' + data.ranks[0].hand + ' value-' + data.ranks[0].value);
+    $('#rank2').text('2. ' + data.ranks[1].name + ' hand: ' + data.ranks[1].hand + ' value-' + data.ranks[1].value);
+    $('#rank3').text('3. ' + data.ranks[2].name + ' hand: ' + data.ranks[2].hand + ' value-' + data.ranks[2].value);
+    $('#rank4').text('4. ' + data.ranks[3].name + ' hand: ' + data.ranks[3].hand + ' value-' + data.ranks[3].value);
     $('#visible-cards-wrapper').html('<h3>Visible Cards</h3>');
     setTimeout(function () {
       $('#winner-message').text('');
