@@ -9,3 +9,11 @@ Clone and move into the repo, then:
 node app.js
 ```
 Then each player must connect locally on port 8080 to play
+
+### To Run Tests
+Simply use command:
+
+```
+mocha
+```
+May not work on Windows
